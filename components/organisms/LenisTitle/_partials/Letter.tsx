@@ -1,6 +1,6 @@
 import { m } from 'framer-motion'
 
-import SlideInAnimation from '@atoms/SlideInAnimation'
+import SlideInAnimation from '@helpers/SlideInAnimation'
 
 type Props = {
     letter: string

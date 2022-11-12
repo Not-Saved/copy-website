@@ -20,13 +20,12 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" />
             </head>
             <body>
-                <div className="background-gradient relative overflow-hidden bg-black">
-                    <Contexts>
-                        <Intro />
-                        <ScrollProgressBar />
-                        {children}
-                    </Contexts>
-                </div>
+                <Contexts>
+                    <Intro />
+                    <ScrollProgressBar />
+                    {children}
+                </Contexts>
+                <div className="background-gradient pointer-events-none fixed top-0 left-0 z-[-1] h-full w-full bg-black"></div>
             </body>
         </html>
     )

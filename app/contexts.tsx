@@ -13,7 +13,7 @@ export default function Contexts({ children }: { children: ReactNode }) {
     return (
         <LazyMotion features={domAnimation}>
             <MouseProvider>
-                <ScrollProvider as="main">
+                <ScrollProvider as={'main'}>
                     {children}
                     <MouseArea fixed id="general-mouse-area">
                         <Cursor />

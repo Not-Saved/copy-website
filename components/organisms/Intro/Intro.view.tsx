@@ -1,6 +1,5 @@
 'use client'
 
-import SlideInAnimation from '@atoms/SlideInAnimation'
 import LenisTitle from '@organisms/LenisTitle'
 import { m, Variants } from 'framer-motion'
 

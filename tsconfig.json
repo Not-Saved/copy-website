@@ -23,6 +23,7 @@
 		"@atoms/*": ["./components/atoms/*"],
 		"@molecules/*": ["./components/molecules/*"],
 		"@organisms/*": ["./components/organisms/*"],
+		"@helpers/*": ["./components/helpers/*"],
 		"@lib/*": ["./lib/*"]
 	  }
   },

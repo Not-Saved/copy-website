@@ -15,7 +15,7 @@ export default function Client() {
         } else {
             setOverflowHidden(false)
         }
-    }, [visible])
+    }, [visible, setOverflowHidden])
 
     useEffect(() => {
         setTimeout(() => setVisible(false), 3000)

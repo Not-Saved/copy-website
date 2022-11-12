@@ -28,6 +28,7 @@
         overflow: hidden;
         display: block;
         pointer-events: none;
+        z-index: -1;
     }
 }
 
