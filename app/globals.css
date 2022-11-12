@@ -1,26 +1,81 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .stretch-expanded {
+        font-stretch: expanded;
+    }
+    .stretch-condensed {
+        font-stretch: condensed;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components {
+    .background-gradient::after {
+        background: radial-gradient(
+            theme(colors.pink),
+            theme(colors.transparent) 70%
+        );
+        transform: translateX(-50%) translateY(50vh);
+        opacity: 0.5;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 50%;
+        height: 100vw;
+        width: 200vw;
+        overflow: hidden;
+        display: block;
+        pointer-events: none;
+    }
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+    html {
+        font-family: theme(fontFamily.sans);
+        width: 100%;
+        height: 100%;
+    }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    body {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @font-face {
+        font-family: Slussen;
+        font-weight: 400;
+        font-style: normal;
+        src: local(''), url(/fonts/Slussen-Regular-TRIAL.otf) format('opentype');
+    }
+    @font-face {
+        font-family: Slussen;
+        font-weight: 600;
+        font-style: normal;
+        src: local(''), url(/fonts/Slussen-bold-TRIAL.otf) format('opentype');
+    }
+    @font-face {
+        font-family: Slussen;
+        font-weight: 500;
+        font-style: normal;
+        src: local(''), url(/fonts/Slussen-medium-TRIAL.otf) format('opentype');
+    }
+    @font-face {
+        font-family: Slussen;
+        font-stretch: condensed;
+        font-weight: 900;
+        font-style: normal;
+        src: local(''),
+            url(/fonts/Slussen-compressed-Black-TRIAL.otf) format('opentype');
+    }
+    @font-face {
+        font-family: Slussen;
+        font-stretch: expanded;
+        font-style: normal;
+        font-weight: 900;
+        src: local(''),
+            url(/fonts/Slussen-expanded-Black-TRIAL.otf) format('opentype');
+    }
 }
